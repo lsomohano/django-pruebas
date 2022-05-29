@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Titulo Modificado {% endblock %}
+{% block content %}
+    <p>El nombre del alumno es ; {{nombre_persona}} {{apellido_persona}}</p>
+    <p>Hoy es {{fecha_actual}}</p>
+    <p>Lista: {{temas.1}}</p>
+    <p><strong>Temas del curso:</strong></p>
+    {% comment %}
+        Este es un comentario en pyton
+        nada mas para probar.
+    {% endcomment%}
+    <p>
+        <ul>
+        {% if temas %}
+            {% for el_tema in temas %}
+
+                <li>{{el_tema}}</li>
+            
+            {% endfor %}
+        {% else %}
+            No hay elementos en la lista    
+        {% endif %}
+        </ul>
+    </p>
+{% endblock %}
