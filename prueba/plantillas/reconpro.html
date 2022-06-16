@@ -7,18 +7,18 @@
     {% if data.EstimationQuestions %}
     
         {% for foto in data.EstimationQuestions %}
-            <ul></ul>
+            <ul>
                 {% if foto.AnswerType.Id == 2 %}
                 <li>{{foto.Question.Text}} : {{foto.Answer}} </li>
                 {% endif %}
             </ul>  
 
             {% if foto.AnswerType.Id == 6 %}   
-                <img src="{% static 'reconpro/' %}{{ foto.Answer }}" class="img-responsive" style="width: 50px; float: left; margin-right: 10px;" /> 
+                <img src="{% static 'reconpro/20211224/' %}{{ foto.Answer }}" class="img-responsive" style="width: 30%; float: left; margin-right: 10px;" /> 
             {% endif %}
-
+                    
             {% if foto.AnswerType.Id == 9 %}
-                <img src="{% static 'reconpro/' %}{{ foto.Answer }}" class="img-responsive" style="width: 80px; float: left; margin-right: 10px;" />
+                <img src="{% static 'reconpro/20211224/' %}{{ foto.Answer }}" class="img-responsive" style="width: 80px; float: left; margin-right: 10px;" />
             {% endif %}
         {% endfor %}
         {% else %}
