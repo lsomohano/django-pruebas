@@ -50,9 +50,9 @@ def calcula_edad(request, edad, agno):
 #Lee un los archivos JSON de la carpeta Inspections
 def lee_archivos(request, economico):
     
-    path = '/code/prueba/static/reconpro/20211224/Inspections/'
+    path = '/code/prueba/static/reconpro/20220122/Inspections/'
     dirs = os.listdir(path)
-    path_img = '/code/prueba/static/reconpro/20211224/'
+    path_img = '/code/prueba/static/reconpro/20220122/'
     data = {}
 
     for file in dirs:
